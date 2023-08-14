@@ -1,0 +1,47 @@
+{
+  "name": "platforma_pontaj",
+  "version": "1.1.0",
+  "description": "Sistem de pontare pe baza unui card, cartela sau telefon.",
+  "main": "server.js",
+  "scripts": {
+    "start": "concurrently \"nodemon\" \"cd ../frontend && npm start \"",
+    "build": "npm run compress && npm run buildexe",
+    "compress": "node builder.js",
+    "buildexe": "pkg server.js --target node16-win-x64 --output Server.exe --config package.json",
+    "dev": "node server.js",
+    "buildimporter": "pkg server_popupate_db.js --output Importer.exe"
+  },
+  "author": "Gabriel Ciobanu",
+  "license": "ISC",
+  "dependencies": {
+    "archiver": "^5.3.1",
+    "axios": "^0.25.0",
+    "body-parser": "^1.19.1",
+    "concurrently": "^7.5.0",
+    "cors": "^2.8.5",
+    "excel4node": "^1.7.2",
+    "express": "^4.17.1",
+    "mssql": "^7.3.0",
+    "node-cache": "^5.1.2",
+    "wkhtmltopdf": "^0.4.0",
+    "xlsx": "^0.18.0",
+    "xml-js": "^1.6.11"
+  },
+  "bin": "server.js",
+  "pkg": {
+    "assets": "dist/**/*",
+    "outputPath": "livrabil"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "public/*",
+      "dist/*",
+      "logs/*"
+    ]
+  },
+  "devDependencies": {
+    "clean-css": "^5.2.2",
+    "html-minifier": "^4.0.0",
+    "uglify-js": "^3.14.3"
+  }
+}

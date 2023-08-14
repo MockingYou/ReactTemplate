@@ -1,0 +1,65 @@
+{
+    "db": {
+        "user": "sa",
+        "password": "Kapsch123",
+        "server": "192.168.182.101",
+        "port": 1433,
+        "database": "PONTAJCNAB",
+        "options": {
+            "encrypt": false
+        },
+        "pool": {
+            "max": 100,
+            "min": 5
+        }
+    },
+	 "dbIncedo": {
+        "user": "sa",
+        "password": "Kapsch123",
+        "server": "192.168.182.101",
+        "port": 1433,
+        "database": "PONTAJCNAB",
+        "options": {
+            "encrypt": false
+        },
+        "pool": {
+            "max": 100,
+            "min": 5
+        }
+    },
+    "dbIncedoOOOOOOOOOOLD": {
+        "user": "sysdba",
+        "password": "masterkey",
+        "server": "incedo.kbclab.ro",
+        "port": 1433,
+        "database": "INCEDO",
+        "options": {
+            "encrypt": false
+        },
+        "pool": {
+            "max": 100,
+            "min": 5
+        }
+    },
+    "certificates": {
+        "key": "server.key",
+        "cert": "server.crt",
+        "passphrase": "Kapsch123"
+    },
+    "webport": 444,
+    "webporthttp":8000,
+    "tlsclientport": 8880,
+
+    "syncscansintervalminutes":1,
+	"syncusersintervalminutes":1,
+
+    "importDataFileName": "Departamente.xlsx",
+    "baseURL": "https://192.168.182.44:444",
+    "endpoint": "/incedo/api/xml",
+    "systemClockingPath": "exported/",
+    "systemClockingLockedPath": "locked/",
+    "systemImportUsersPath": "D:\\import\\Angajati.csv",
+    "systemImportUsersDone": "D:\\import\\done\\",
+    "departHeaderSg": ["Birou", "Serviciu", "Directie"],
+    "departHeaderPl": ["Birouri", "Servicii", "Directii"]
+}
